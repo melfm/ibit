@@ -1,0 +1,9 @@
+tensorboard
+gym
+matplotlib
+termcolor
+imageio
+imageio-ffmpeg
+scikit-image
+kornia
+seaborn

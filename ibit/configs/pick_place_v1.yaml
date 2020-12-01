@@ -1,0 +1,93 @@
+# env
+env: pick-place-v1
+# Note: action repeat is not being used in metaworld
+action_repeat: 4
+# train
+num_train_steps: 1000000
+num_train_iters: 1
+num_seed_steps: 1000
+replay_buffer_capacity: 100000
+seed: 1
+# eval
+eval_frequency: 15
+ckpt_frequency: 100
+num_eval_episodes: 10
+# misc
+log_frequency_step: 10000
+log_save_tb: true
+save_video: true
+device: cuda
+remote_render: False
+train_vid_interval: 10000
+# observation
+image_size: 84
+image_pad: 4
+frame_stack: 3
+# global params
+lr: 1e-3
+batch_size: 256
+reload_weights: False
+env_resample_rate: 100000
+num_envs: 4
+resample_env: False
+apply_mod: True
+# single_goal vs multi_goal
+goal_mode: 'single_goal'
+internvention: ['type_1', 'type_2']
+penalty_type: 'irm'
+penalty_weight: 1.0
+
+# agent configuration
+agent:
+  name: dbc
+  cls: agents.dbc_agent.DBCAgent
+  params:
+    obs_shape: ??? # to be specified later
+    action_shape: ??? # to be specified later
+    action_range: ??? # to be specified later
+    device: ${device}
+    encoder_cfg: ${encoder}
+    critic_cfg: ${critic}
+    actor_cfg: ${actor}
+    discount: 0.99
+    init_temperature: 0.1
+    lr: ${lr}
+    actor_update_frequency: 2
+    critic_tau: 0.01
+    critic_target_update_frequency: 2
+    batch_size: ${batch_size}
+    penalty_type: ${penalty_type}
+    penalty_weight: ${penalty_weight}
+
+critic:
+  cls: modules.Critic
+  params:
+    encoder_cfg: ${agent.params.encoder_cfg}
+    action_shape: ${agent.params.action_shape}
+    hidden_dim: 1024
+    hidden_depth: 2
+    
+actor:
+  cls: modules.Actor
+  params:
+    encoder_cfg: ${agent.params.encoder_cfg}
+    action_shape: ${agent.params.action_shape}
+    hidden_depth: 2
+    hidden_dim: 1024
+    log_std_bounds: [-10, 2]
+    
+encoder:
+  cls: modules.Encoder
+  params:
+      obs_shape: ${agent.params.obs_shape}
+      feature_dim: 50
+
+# hydra configuration
+hydra:
+  run:
+    dir: ./runs/${now:%Y.%m.%d}/${env}_${agent.name}_${hydra.job.override_dirname}/seed=${seed}
+  job:
+    config:
+      override_dirname:
+        exclude_keys:
+          - seed

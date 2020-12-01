@@ -1,0 +1,24 @@
+name: ibit
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - pytorch
+  - cudatoolkit=9.2
+  - absl-py
+  - pyparsing
+  - jupyterlab
+  - pip:
+    - termcolor
+    - imageio
+    - imageio-ffmpeg
+    - hydra-core
+    - pandas
+    - ipdb
+    - tqdm
+    - torchvision
+    - yapf
+    - mujoco_py
+    - sklearn
+    - matplotlib
+    - kornia
