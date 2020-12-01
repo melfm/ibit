@@ -14,10 +14,6 @@ If you use this repo in your research, please consider citing the paper as follo
 TODO
 ```
 
-## Requirements
-We assume you have access to a gpu that can run CUDA 9.2. Then, the simplest way to install all required dependencies is ....
-TODO
-
 ## Instructions
 To train the 
 ```

@@ -1,5 +1,20 @@
 # IBIT
-Intervention-based Invariant Transfer learning
+
+**Intervention Design for Effective Sim2Real Transfer** by
+
+[Melissa Mozifian](https://melfm.github.io/about.html), [Amy Zhang](https://amyzhang.github.io/), [Joelle Pineau](https://mila.quebec/en/person/joelle-pineau/) and [David Meger](https://mila.quebec/en/person/david-meger/).
+
+[[Paper]](TODO) [[Webpage]](https://sites.google.com/view/ibit)
+
+<p align="center">
+  <img src="images/robot_teaser.png" />
+</p>
+
+## Citation
+If you use this repo in your research, please consider citing the paper as follows
+```
+TODO
+```
 
 ## Checking out the repo with submodules
 ssh
@@ -97,3 +112,8 @@ So from ibit, run:
 ```
 ln -s ../jaco_real/jaco_physics.py jaco_physics.py
 ```
+
+# Future Work
+<p align="center">
+  <img src="images/help_jaco.gif" />
+</p>
