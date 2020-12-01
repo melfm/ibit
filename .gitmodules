@@ -1,0 +1,9 @@
+[submodule "third_party/dm_control"]
+	path = third_party/dm_control
+	url = git@github.com:melfm/dm_control.git
+[submodule "third_party/dmc2gym"]
+	path = third_party/dmc2gym
+	url = git@github.com:melfm/dmc2gym.git
+[submodule "third_party/metaworld"]
+	path = third_party/metaworld
+	url = git@github.com:melfm/metaworld.git
