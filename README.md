@@ -4,7 +4,7 @@
 
 [Melissa Mozifian](https://melfm.github.io/about.html), [Amy Zhang](https://amyzhang.github.io/), [Joelle Pineau](https://mila.quebec/en/person/joelle-pineau/) and [David Meger](https://mila.quebec/en/person/david-meger/).
 
-[[Paper]](TODO) [[Webpage]](https://sites.google.com/view/ibit)
+[[Paper]](https://arxiv.org/abs/2012.02055) [[Webpage]](https://sites.google.com/view/ibit)
 
 <p align="center">
   <img src="images/robot_teaser.png" />
