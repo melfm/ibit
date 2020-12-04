@@ -13,7 +13,14 @@
 ## Citation
 If you use this repo in your research, please consider citing the paper as follows
 ```
-TODO
+@misc{mozifian2020intervention,
+      title={Intervention Design for Effective Sim2Real Transfer}, 
+      author={Melissa Mozifian and Amy Zhang and Joelle Pineau and David Meger},
+      year={2020},
+      eprint={2012.02055},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
+}
 ```
 
 ## Checking out the repo with submodules
