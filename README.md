@@ -35,6 +35,11 @@ git clone --recurse-submodules https://github.com/melfm/ibit.git
 ```
 
 ## Dependencies
+For all python package dependencies run:
+```
+pip install -r requirements.txt
+```
+
 The hydra dependency gets updated frequently which can potentially break the config style, the version used is `1.0.3`
 ```
 pip install hydra-core
@@ -75,7 +80,7 @@ python train.py --config-name='configs/jaco_reach_site_features' agent.name=drq 
 
 Running with hyperparameter options
 ```
-python train.py --config-name='configs/reach_v1' agent.name=deepmdp agent.cls=agents.deepmdp_agent.DeepMDPAgent penalty_type='irm' env_resample_rate=50000 num_envs=4
+python train.py --config-name='configs/reach_v1' penalty_type='rex' env_resample_rate=50000 num_envs=4
 ```
 
 ## Experiments Checklist

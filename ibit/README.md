@@ -1,8 +1,6 @@
 # IBIT: Intervention-based Invariant Transfer learning
 
-This is a PyTorch implementation of **IBIT** from
-
-**Intervention Design for Effective Sim2Real Transfer** by
+This is a PyTorch implementation of **IBIT**.
 
 ## Instructions
 To train the 
