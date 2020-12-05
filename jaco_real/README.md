@@ -8,8 +8,6 @@
 ## Running
 Run `roslaunch jaco_remote.launch` from inside the container. If `roslaunch` is not finding the launchfile, just run it from `ros_interface/launch`.
 
-Now run `simple_robot.py` from outside of the container.
-
 ## Commands
 ### Building Docker
 These instructions are for the docker with Nvidia support. Just don't forget to build with the same name and make sure the runner script is trying to launch the correct one!
