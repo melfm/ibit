@@ -4,16 +4,6 @@ This is a PyTorch implementation of **IBIT** from
 
 **Intervention Design for Effective Sim2Real Transfer** by
 
-[Melissa Mozifian](https://melfm.github.io/about.html), [Amy Zhang](https://amyzhang.github.io/), [Joelle Pineau](https://mila.quebec/en/person/joelle-pineau/) and [David Meger](https://mila.quebec/en/person/david-meger/).
-
-[[Paper]](TODO) [[Webpage]](https://sites.google.com/view/ibit)
-
-## Citation
-If you use this repo in your research, please consider citing the paper as follows
-```
-TODO
-```
-
 ## Instructions
 To train the 
 ```
@@ -55,6 +45,9 @@ R - average episode return computed over `num_eval_episodes` (usually 10)
 
 ## Acknowledgements 
 We used [kornia](https://github.com/kornia/kornia) for data augmentation.
+
 ROS_Interface
+
 Modified DMSuite
+
 Modified Wrapper

@@ -13,25 +13,25 @@
 ## Citation
 If you use this repo in your research, please consider citing the paper as follows
 ```
-@misc{mozifian2020intervention,
-      title={Intervention Design for Effective Sim2Real Transfer}, 
-      author={Melissa Mozifian and Amy Zhang and Joelle Pineau and David Meger},
-      year={2020},
-      eprint={2012.02055},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO}
+@article{mozifian2020intervention,
+    title={Intervention Design for Effective Sim2Real Transfer},
+    author={Melissa Mozifian and Amy Zhang and Joelle Pineau and David Meger},
+    year={2020},
+    eprint={2012.02055},
+    archivePrefix={arXiv},
+    primaryClass={cs.RO}
 }
 ```
 
 ## Checking out the repo with submodules
 ssh
 ```
-git clone --recurse-submodules -j8 git@github.com:melfm/simrealrep.git
+git clone --recurse-submodules git@github.com:melfm/ibit.git
 ```
 
 https
 ```
-git clone --recurse-submodules -j8 https://github.com/melfm/simrealrep.git
+git clone --recurse-submodules https://github.com/melfm/ibit.git
 ```
 
 ## Dependencies
@@ -44,6 +44,9 @@ Install the third_party dependencies by running
 bash setup_thirdparty.sh
 ```
 
+The third parties have further dependencies. For instance Meta-World is based on MuJoCo, which has a proprietary dependency.
+Please follow the [instructions](https://github.com/openai/mujoco-py#install-mujoco) in the mujoco-py package for help. And [DMControl](https://github.com/deepmind/dm_control), there might be some differences for instance it expects the mujoco path to be `~/.mujoco/mujoco200_$PLATFORM/`.
+
 ## Running the code
 From `ibit` dir, you can run the followings
 ```
@@ -51,18 +54,17 @@ cd ibit
 ```
 
 ```
-python train.py --config_name='configs/reach_v1'
-python train.py --config_name='configs/push-v1'
-python train.py --config_name='configs/button-press-v1'
+python train.py --config-name='configs/reach_v1'
+python train.py --config-name='configs/button_press_v1'
 ```
 
 Running DBC Agent
+This is the default agent but in case you want the experiment ID to reflect this:
 ```
 python train.py --config-name='configs/reach_v1' agent.name=dbc agent.cls=agents.dbc_agent.DBCAgent
 ```
 
 Running DRQ Agent
-This is the default agent but in case you want the experiment ID to reflect this:
 ```
 python train.py --config-name='configs/reach_v1' agent.name=drq agent.cls=agents.drq_agent.DRQAgent
 ```
